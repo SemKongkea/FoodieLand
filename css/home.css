@@ -3,6 +3,85 @@
   padding: 0;
   box-sizing: border-box;
 }
-h2 {
-  color: var(--primary-color);
+body {
+  font-family: poppin;
 }
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+/* navigation bar */
+
+.header {
+  background-color: var(--backdrop-color);
+  backdrop-filter: blur(15px);
+  position: sticky;
+  top: 0;
+}
+.navigation-bar {
+  padding: 30px;
+  border-bottom: 1px solid var(--opacity-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: Lobster;
+  font-size: 24px;
+}
+.logo > span {
+  color: #ffb34e;
+}
+
+.navigation-list {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 60px;
+}
+.navigation-link > a {
+  color: var(--primary-color);
+  position: relative;
+}
+.navigation-link > a::before {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  width: 10%;
+  height: 1.5px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  bottom: -3px;
+  transition: width 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+.navigation-link:hover > a::before {
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.icon > i {
+  font-size: 20px;
+}
+.fa-facebook-f:hover {
+  color: dodgerblue;
+}
+.fa-instagram:hover {
+  color: rgb(192, 14, 192);
+}
+.fa-twitter:hover {
+  color: dodgerblue;
+}
+
+/* hero section */
